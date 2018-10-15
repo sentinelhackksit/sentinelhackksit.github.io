@@ -639,11 +639,7 @@ textarea.input {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  #header{
-    padding-top: 10px;
-  }
-}
+
 
 #header.transparent-navbar:not(.fixed-navbar) .navbar-brand .logo .logo-img {
   display: none;
@@ -1121,7 +1117,6 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #b61924;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
