@@ -30,7 +30,7 @@
 		<span></span>
 		<div class="flex-col-c p-t-50 p-b-50">
 			<h3 class="l1-txt1 txt-center p-b-10" id="demo">
-				Coming Soon
+				Launching in
 			</h3><p><br/><br/><p>
 
 			<div class="flex-w flex-c cd100 p-b-82">
@@ -73,10 +73,11 @@
 	  var database = firebase.database();
 
 	  var url="";
+	  var flag="";
 
 	  database.ref('sentinelhack').on('value', snapshot=>{
 	  	const data = snapshot.val();
-	  	const flag = data.flag;
+	  	flag = data.flag;
 	  	url = data.url;
 	  	//console.log(flag, url);
 	  });
@@ -111,7 +112,12 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "Launching";
-    window.location = url;
+    if(flag==="yes"){
+    	window.location = url;
+	}
+	else{
+		window.location.hash = '#demo';
+	}
   }
 }, 1000);
 </script>
