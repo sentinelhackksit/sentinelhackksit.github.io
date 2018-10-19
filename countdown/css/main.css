@@ -243,6 +243,13 @@ input.input100 {
   line-height: 1.4;
 }
 
+.veticalhorizontal {
+    display: table-cell;
+    
+    text-align: center;
+    vertical-align: middle;
+}
+
 .s1-txt4 {
   font-family: Montserrat-Bold;
   font-size: 15px;
@@ -361,7 +368,9 @@ input.input100 {
   background: linear-gradient(-45deg, #ac32e4, #7918f2, #4801ff);
 }
 
-
+.bg-g2{
+  background-image: url("../img/header-bg5.jpg");
+}
 
 
 
