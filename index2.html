@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	   var config = {
+	    apiKey: "AIzaSyDk2K6eEHNcRGO1l3t1_Qb-HYkdPNAdKcE",
+	    authDomain: "ksitieee-b166b.firebaseapp.com",
+	    databaseURL: "https://ksitieee-b166b.firebaseio.com",
+	    projectId: "ksitieee-b166b",
+	    storageBucket: "ksitieee-b166b.appspot.com",
+	    messagingSenderId: "201240116840"
+	  };
+	  firebase.initializeApp(config);
+	  var database = firebase.database();
+
+	  database.ref('sentinelhack').on('value', snapshot=>{
+	  	const data = snapshot.val();
+	  	const flag = data.flag;
+	  	const url = data.url;
+	  	//console.log(flag, url);
+	  	if (flag==='yes') window.location = url;
+	  	else window.location.hash = '#header';
+	  });
+
+	</script>
+
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Sentinel Hack</title>
+	<link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
+
+
+		<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900" rel="stylesheet">
+	
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!-- Owl Carousel -->
+	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+			  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<![endif]-->
+		</head>
+		<body>
+
+			<!-- Header -->
+			<header id="header" class="transparent-navbar">
+				<!-- container -->
+				<div class="container" >
+					<!-- navbar header -->
+					<div class="navbar-header">
+						<!-- Logo -->
+						<div class="navbar-brand">
+							<a class="logo" href="index.html">
+								<img class="logo-img" src="./img/sentinelBlack.png" alt="logo" style="padding-bottom: 10px;">
+								<!--<img class="logo-alt-img" src="./img/WHITE.png" alt="logo">-->
+							</a>
+						</div>
+						<!-- /Logo -->
+
+						<!-- Mobile toggle -->
+						<button class="navbar-toggle">
+							<i class="fa fa-bars"></i>
+						</button>
+						<!-- /Mobile toggle -->
+					</div>
+					<!-- /navbar header -->
+
+					<!-- Navigation -->
+					<nav id="nav">
+					</nav>
+					<!-- /Navigation -->
+				</div>
+				<!-- /container -->
+			</header>
+			<!-- /Header -->
+
+			<!-- Home -->
+			<div id="home">
+				<!-- background image -->
+				<div class="section-bg" style="background-image:url(img/header-bg5.jpg)" data-stellar-background-ratio="0.5"></div>
+				<!-- /background image -->
+
+				<!-- home wrapper -->
+				<div class="home-wrapper">
+					<!-- container -->
+					<div class="container">
+						<!-- row -->
+						
+						<div class="row">
+
+							<!-- home content -->
+							<div class="col-md-8 col-md-offset-2">
+								<div class="home-content">
+									<div class="row">
+										<div class="col-xs-12">
+											<!--h1 class="main-hd">Sentinel Hack</h1-->
+								
+											<br><br>
+											 <p><a href="" class="main-btn3" class="btn btn-lg" size="50px" role="button">LAUNCH ME TO EXPERIENCE THE UNBELIEVABLE</a></p>
+
+
+											 <br>
+										</div>
+									</div>
+									<!--div class="row">
+										<div class="col-md-6">
+											<a href="https://docs.google.com/forms/d/11EG0Lrmy5QWn4Tr5mNSHTyNomZocaWVIOuncAmjWv5A/edit?usp=sharing" class="main-btn" target="_blank" style="margin-top: 350px;">Register</a>
+										</div>
+									</div-->
+								</div>
+							</div>
+							<!-- /home content -->
+						</div>
+						<!-- /row -->
+					</div>
+					<!-- /container -->
+				</div>
+				<!-- /home wrapper -->
+			</div>
+			<!-- /Home -->
+
+</body>
+</html>
