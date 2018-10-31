@@ -599,6 +599,14 @@ Section
   font-size: 42px;
   overflow: hidden;
 }
+ .title2 {
+  position: relative;
+  text-transform: capitalize;
+  font-weight: 900;
+  font-size: 30px;
+  overflow: hidden;
+}
+
 
 .section-title .title>span {
   -webkit-transform: translateY(100%);
