@@ -3,13 +3,16 @@
 Primary style
 
 -------------------------------- */
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-*::after, *::before {
+*::after,
+*::before {
   content: '';
 }
 
@@ -19,6 +22,7 @@ body {
   color: #4e5359;
   background-color: #f3f3f5;
 }
+
 body::after {
   /* overlay layer visible on small devices when the right panel slides in */
   position: fixed;
@@ -33,6 +37,7 @@ body::after {
   -moz-transition: opacity .3s 0s, visibility 0s .3s;
   transition: opacity .3s 0s, visibility 0s .3s;
 }
+
 body.cd-overlay::after {
   visibility: visible;
   opacity: 1;
@@ -40,10 +45,61 @@ body.cd-overlay::after {
   -moz-transition: opacity .3s 0s, visibility 0s 0s;
   transition: opacity .3s 0s, visibility 0s 0s;
 }
+
 @media only screen and (min-width: 768px) {
   body::after {
     display: none;
   }
+}
+
+.gallery-title {
+  font-size: 36px;
+  color: #42B32F;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 70px;
+}
+
+.gallery-title:after {
+  content: "";
+  position: absolute;
+  width: 7.5%;
+  left: 46.5%;
+  height: 45px;
+  border-bottom: 1px solid #5e5e5e;
+}
+
+.filter-button {
+  font-size: 18px;
+  border: 1px solid #42B32F;
+  border-radius: 5px;
+  text-align: center;
+  color: #42B32F;
+  margin-bottom: 30px;
+
+}
+
+.filter-button:hover {
+  font-size: 18px;
+  border: 1px solid #42B32F;
+  border-radius: 5px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #42B32F;
+
+}
+
+.btn-default:active .filter-button:active {
+  background-color: #42B32F;
+  color: white;
+}
+
+.port-image {
+  width: 100%;
+}
+
+.gallery_product {
+  margin-bottom: 30px;
 }
 
 
@@ -65,11 +121,13 @@ Main components
   margin: 2em auto;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
+
 .cd-faq:after {
   content: "";
   display: table;
   clear: both;
 }
+
 @media only screen and (min-width: 768px) {
   .cd-faq {
     position: relative;
@@ -93,7 +151,9 @@ Main components
   border-bottom: 1px solid #555b61;
   text-overflow: ellipsis;
 }
-.cd-faq-categories a::before, .cd-faq-categories a::after {
+
+.cd-faq-categories a::before,
+.cd-faq-categories a::after {
   /* plus icon on the right */
   position: absolute;
   top: 50%;
@@ -103,6 +163,7 @@ Main components
   width: 10px;
   background-color: #7f868e;
 }
+
 .cd-faq-categories a::after {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -110,15 +171,18 @@ Main components
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+
 .cd-faq-categories li:last-child a {
   border-bottom: none;
 }
+
 @media only screen and (min-width: 768px) {
   .cd-faq-categories {
     width: 20%;
     float: left;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
   }
+
   .cd-faq-categories a {
     font-size: 16px;
     font-size: 16px;
@@ -129,17 +193,22 @@ Main components
     -moz-transition: background 0.2s, padding 0.2s;
     transition: background 0.2s, padding 0.2s;
   }
-  .cd-faq-categories a::before, .cd-faq-categories a::after {
+
+  .cd-faq-categories a::before,
+  .cd-faq-categories a::after {
     display: none;
   }
+
   .no-touch .cd-faq-categories a:hover {
     background: #555b61;
   }
+
   .no-js .cd-faq-categories {
     width: 100%;
     margin-bottom: 2em;
   }
 }
+
 @media only screen and (min-width: 1024px) {
   .cd-faq-categories {
     position: absolute;
@@ -148,6 +217,7 @@ Main components
     width: 200px;
     z-index: 2;
   }
+
   .cd-faq-categories a::before {
     /* decorative rectangle on the left visible for the selected item */
     display: block;
@@ -162,16 +232,20 @@ Main components
     -moz-transition: opacity 0.2s;
     transition: opacity 0.2s;
   }
+
   .cd-faq-categories .selected {
     background: #42464b !important;
   }
+
   .cd-faq-categories .selected::before {
     opacity: 1;
   }
+
   .cd-faq-categories.is-fixed {
     /* top and left value assigned in jQuery */
     position: fixed;
   }
+
   .no-js .cd-faq-categories {
     position: relative;
   }
@@ -199,6 +273,7 @@ Main components
   -moz-transition: -moz-transform .3s;
   transition: transform .3s;
 }
+
 .cd-faq-items.slide-in {
   -webkit-transform: translateZ(0) translateX(0%);
   -moz-transform: translateZ(0) translateX(0%);
@@ -206,6 +281,7 @@ Main components
   -o-transform: translateZ(0) translateX(0%);
   transform: translateZ(0) translateX(0%);
 }
+
 .no-js .cd-faq-items {
   position: static;
   height: auto;
@@ -216,6 +292,7 @@ Main components
   -o-transform: translateX(0);
   transform: translateX(0);
 }
+
 @media only screen and (min-width: 768px) {
   .cd-faq-items {
     position: static;
@@ -232,10 +309,12 @@ Main components
     background: transparent;
   }
 }
+
 @media only screen and (min-width: 1024px) {
   .cd-faq-items {
     float: none;
   }
+
   .no-js .cd-faq-items {
     padding-left: 0;
   }
@@ -264,7 +343,9 @@ Main components
   -moz-transition: right 0.4s;
   transition: right 0.4s;
 }
-.cd-close-panel::before, .cd-close-panel::after {
+
+.cd-close-panel::before,
+.cd-close-panel::after {
   /* close icon in CSS */
   position: absolute;
   top: 16px;
@@ -274,6 +355,7 @@ Main components
   width: 18px;
   background: #6c7d8e;
 }
+
 .cd-close-panel::before {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -281,6 +363,7 @@ Main components
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 .cd-close-panel::after {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -288,9 +371,11 @@ Main components
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
+
 .cd-close-panel.move-left {
   right: 2%;
 }
+
 @media only screen and (min-width: 768px) {
   .cd-close-panel {
     display: none;
@@ -301,17 +386,21 @@ Main components
   /* hide group not selected */
   display: none;
 }
+
 .cd-faq-group.selected {
   display: block;
 }
+
 .cd-faq-group .cd-faq-title {
   background: transparent;
   box-shadow: none;
   margin: 1em 0;
 }
+
 .no-touch .cd-faq-group .cd-faq-title:hover {
   box-shadow: none;
 }
+
 .cd-faq-group .cd-faq-title h2 {
   text-transform: uppercase;
   font-size: 16px;
@@ -319,15 +408,18 @@ Main components
   font-weight: 700;
   color: #bbbbc7;
 }
+
 .no-js .cd-faq-group {
   display: block;
 }
+
 @media only screen and (min-width: 768px) {
   .cd-faq-group {
     /* all groups visible */
     display: block;
   }
-  .cd-faq-group > li {
+
+  .cd-faq-group>li {
     background: #ffffff;
     margin-bottom: 6px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
@@ -335,12 +427,15 @@ Main components
     -moz-transition: box-shadow 0.2s;
     transition: box-shadow 0.2s;
   }
-  .no-touch .cd-faq-group > li:hover {
+
+  .no-touch .cd-faq-group>li:hover {
     box-shadow: 0 1px 10px rgba(108, 125, 142, 0.3);
   }
+
   .cd-faq-group .cd-faq-title {
     margin: 2em 0 1em;
   }
+
   .cd-faq-group:first-child .cd-faq-title {
     margin-top: 0;
   }
@@ -352,6 +447,7 @@ Main components
   margin: 1.6em 0 .4em;
   line-height: 1.2;
 }
+
 @media only screen and (min-width: 768px) {
   .cd-faq-trigger {
     font-size: 24px;
@@ -360,7 +456,9 @@ Main components
     margin: 0;
     padding: 24px 72px 24px 24px;
   }
-  .cd-faq-trigger::before, .cd-faq-trigger::after {
+
+  .cd-faq-trigger::before,
+  .cd-faq-trigger::after {
     /* arrow icon on the right */
     position: absolute;
     right: 24px;
@@ -377,6 +475,7 @@ Main components
     -moz-transition-duration: 0.2s;
     transition-duration: 0.2s;
   }
+
   .cd-faq-trigger::before {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -385,6 +484,7 @@ Main components
     transform: rotate(45deg);
     right: 32px;
   }
+
   .cd-faq-trigger::after {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
@@ -392,6 +492,7 @@ Main components
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
+
   .content-visible .cd-faq-trigger::before {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
@@ -399,6 +500,7 @@ Main components
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
+
   .content-visible .cd-faq-trigger::after {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -414,25 +516,28 @@ Main components
   line-height: 1.4;
   color: #6c7d8e;
 }
+
 @media only screen and (min-width: 768px) {
   .cd-faq-content {
     display: none;
     padding: 0 24px 30px;
   }
+
   .cd-faq-content p {
     line-height: 1.6;
   }
+
   .no-js .cd-faq-content {
     display: block;
   }
 }
 
 
-.faq-question{
+.faq-question {
   font-size: 20px ! important;
 }
 
-.faq-answer{
+.faq-answer {
   font-size: 16px !important;
 }
 
@@ -451,7 +556,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0px 0px 15px;
   color: #0b0f28;
   font-weight: 700;
@@ -484,7 +594,8 @@ a {
   transition: 0.3s color;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
   outline: none;
   color: #dd0a37;
@@ -492,13 +603,14 @@ a:hover, a:focus {
 
 
 
-.yolool ol{
+.yolool ol {
   margin: 1;
   padding: 1;
   list-style-type: upper-roman;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none
@@ -544,7 +656,8 @@ i {
 }
 
 
-.main-btn:hover, .main-btn:focus {
+.main-btn:hover,
+.main-btn:focus {
   color: #FFF;
   opacity: 0.8;
 }
@@ -599,7 +712,8 @@ Section
   font-size: 42px;
   overflow: hidden;
 }
- .title2 {
+
+.title2 {
   position: relative;
   font-weight: 700;
   font-size: 20px;
@@ -700,6 +814,7 @@ NAVIGATION
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
   }
+
   to {
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
@@ -711,6 +826,7 @@ NAVIGATION
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
   }
+
   to {
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
@@ -744,7 +860,8 @@ NAVIGATION
   background: #dd0a37;
 }
 
-.main-nav li a:hover, .main-nav li a:focus {
+.main-nav li a:hover,
+.main-nav li a:focus {
   background-color: transparent;
   color: #dd0a37;
 }
@@ -784,19 +901,26 @@ NAVIGATION
     -webkit-transition: 0.3s all;
     transition: 0.3s all;
   }
+
   .main-nav.open {
     max-height: 500px;
   }
+
   .main-nav li.active a:after {
     display: none;
   }
+
   #header.transparent-navbar .main-nav li a {
     color: #0b0f28;
   }
-  .main-nav li a:hover, .main-nav li a:focus, .main-nav li.active a {
+
+  .main-nav li a:hover,
+  .main-nav li a:focus,
+  .main-nav li.active a {
     background-color: #dd0a37;
     color: #fff !important;
   }
+
   .navbar-toggle {
     display: block;
   }
@@ -992,7 +1116,8 @@ SPONSORS
   width: 100%;
   max-width: 100%;
 }
-.cafes{
+
+.cafes {
   margin: auto;
   margin-bottom: 40px;
   max-height: 300px;
@@ -1076,6 +1201,7 @@ RESPONSIVE
     text-align: center;
     margin: 30px 0px;
   }
+
   .copyright {
     display: block;
     text-align: center;
@@ -1086,32 +1212,39 @@ RESPONSIVE
   .home-content h1 {
     font-size: 31px;
   }
+
   .page-wrapper-content h1 {
     font-size: 31px;
   }
+
   .schedule .schedule-day {
     width: 90px;
     height: 90px;
   }
+
   .schedule .schedule-content {
     padding-left: 115px;
   }
+
   .sxhedule .schedule-day .day {
     font-size: 31px;
     line-height: 31px;
   }
+
   .schedule .schedule-hour {
     left: 47px;
   }
+
   .schedule:after {
     left: 45px;
   }
+
   .schedule+.schedule:before {
     left: 45px;
   }
 
-  .section-bg{
-    background-image:url("https://usicthack.com/css/img/uhack-mobile.png");
+  .section-bg {
+    background-image: url("https://usicthack.com/css/img/uhack-mobile.png");
   }
 }
 
@@ -1141,7 +1274,7 @@ canvas {
 
 /* ---- stats.js ---- */
 
-.count-particles{
+.count-particles {
   background: #000022;
   position: absolute;
   top: 48px;
@@ -1157,21 +1290,21 @@ canvas {
   font-weight: bold;
 }
 
-.js-count-particles{
+.js-count-particles {
   font-size: 1.1em;
 }
 
 #stats,
-.count-particles{
+.count-particles {
   -webkit-user-select: none;
 }
 
-#stats{
+#stats {
   border-radius: 3px 3px 0 0;
   overflow: hidden;
 }
 
-.count-particles{
+.count-particles {
   border-radius: 0 0 3px 3px;
 }
 
