@@ -53,8 +53,8 @@ body.cd-overlay::after {
 }
 
 .gallery-title {
-  font-size: 36px;
-  color: #42B32F;
+  font-size: 25px;
+  color: #000000;
   text-align: center;
   font-weight: 500;
   margin-bottom: 70px;
@@ -62,11 +62,12 @@ body.cd-overlay::after {
 
 .gallery-title:after {
   content: "";
+  margin-top: 10px;
   position: absolute;
   width: 7.5%;
   left: 46.5%;
   height: 45px;
-  border-bottom: 1px solid #5e5e5e;
+  /* border-bottom: 1px solid #5e5e5e; */
 }
 
 .filter-button {
@@ -99,7 +100,12 @@ body.cd-overlay::after {
 }
 
 .gallery_product {
+  text-align: center;
   margin-bottom: 30px;
+}
+
+.img-responsive {
+  margin: auto;
 }
 
 
