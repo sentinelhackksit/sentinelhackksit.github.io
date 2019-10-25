@@ -44,7 +44,7 @@
 
   <body>
     <!-- Header -->
-    <header id="header">
+    <header id="header" class="transparent-navbar">
       <!-- container -->
       <div class="container">
         <!-- navbar header -->
@@ -58,13 +58,12 @@
                 alt="logo"
                 style="padding-bottom: 10px;"
               />
-              <!--<img class="logo-alt-img" src="./img/WHITE.png" alt="logo">-->
             </a>
           </div>
           <!-- /Logo -->
 
           <!-- Mobile toggle -->
-          <button class="navbar-toggle">
+          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navs">
             <i class="fa fa-bars"></i>
           </button>
           <!-- /Mobile toggle -->
@@ -72,20 +71,24 @@
         <!-- /navbar header -->
 
         <!-- Navigation -->
-        <nav id="nav">
+        <div id="navs" class="collapse navbar-collapse">
           <ul class="main-nav nav navbar-nav navbar-right">
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#prizes">Prizes</a></li>
-            <li><a href="index.html#faq">FAQs</a></li>
+            <li><a href="index.html#home" data-toggle="collapse" data-target=".in">Home</a></li>
+            <li><a href="index.html#about" data-toggle="collapse" data-target=".in">About</a></li>
+            <li><a href="index.html#prizes" data-toggle="collapse" data-target=".in">Prizes</a></li>
+            <li><a href="index.html#faq" data-toggle="collapse" data-target=".in">FAQs</a></li>
             <!-- <li><a href="#schedule">Schedule</a></li> -->
-            <li><a href="index.html#rules">Rules</a></li>
-            <li><a href="index.html#sponsors">Sponsors</a></li>
-            <li><a href="index.html#photos">Photos</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#rules" data-toggle="collapse" data-target=".in">Rules</a></li>
+            <li>
+              <a href="index.html#sponsors" data-toggle="collapse" data-target=".in">Sponsors</a>
+            </li>
+            <li><a href="index.html#photos" data-toggle="collapse" data-target=".in">Photos</a></li>
+            <li>
+              <a href="index.html#contact" data-toggle="collapse" data-target=".in">Contact</a>
+            </li>
             <li><a href="https://forms.gle/mmD7nWYBip9vMhpK8" target="_blank">Register</a></li>
           </ul>
-        </nav>
+        </div>
         <!-- /Navigation -->
       </div>
       <!-- /container -->
