@@ -901,7 +901,7 @@ NAVIGATION
 @media only screen and (max-width: 767px) {
   .main-nav {
     margin: 0px -15px;
-    max-height: 0;
+    /* max-height: 0; */
     overflow-y: scroll;
     background-color: #FFF;
     -webkit-transition: 0.3s all;
