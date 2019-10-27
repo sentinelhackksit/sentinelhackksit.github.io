@@ -52,6 +52,10 @@ body.cd-overlay::after {
   }
 }
 
+.center-block {
+  float: none;
+}
+
 .gallery-title {
   font-size: 25px;
   color: #000000;
