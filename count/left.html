@@ -1,0 +1,257 @@
+<!-- <!DOCTYPE html> -->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="./js/acme.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./js/bootstrap.min.css" />
+    <title>Countdown Timer</title>
+
+    <link rel="icon" href="./favicon.png" type="image/gif" sizes="16x16" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #000000;
+      }
+
+      .container {
+        color: #ffd700;
+        text-align: center;
+      }
+
+      h1 {
+        margin-top: 30px;
+        font-weight: normal;
+      }
+
+      li {
+        display: inline-block;
+        font-size: 1.5em;
+        list-style-type: none;
+        padding: 1em;
+        text-transform: uppercase;
+      }
+
+      .t1 {
+        display: block;
+        font-size: 4.5rem;
+      }
+      .t2 {
+        display: block;
+        font-size: 2.5rem;
+      }
+
+      /* general styling */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        /* -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox; */
+        /* display: flex; */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,
+          Cantarell, "Helvetica Neue", sans-serif;
+      }
+
+      .container {
+        visibility: initial;
+        /* display: none; */
+        margin: 0 auto;
+      }
+      .container2 {
+        color: #e9e0af;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="words">
+      <img src="./senti2.png" height="200px" />
+      <br />
+      <!-- <h1 id="head">Sentinel Hack 2.0</h1> -->
+      <br />
+      <div id="timer">
+        <h1 id="head">Time left:</h1>
+        <ul>
+          <li><span id="days" class="t1"></span>days</li>
+          <li><span id="hours" class="t1"></span>Hours</li>
+          <li><span id="minutes" class="t1"></span>Minutes</li>
+          <li><span id="seconds" class="t1"></span>Seconds</li>
+        </ul>
+      </div>
+    </div>
+    <center>
+      <div class="container2" id="gallery">
+        <img src="./senti2.png" height="100px" /><br />
+        <div id="timer2">
+          <!-- <h2>Time left:</h2> -->
+          <ul>
+            <li><span id="days2" class="t2"></span>days</li>
+            <li><span id="hours2" class="t2"></span>Hours</li>
+            <li><span id="minutes2" class="t2"></span>Minutes</li>
+            <li><span id="seconds2" class="t2"></span>Seconds</li>
+          </ul>
+        </div>
+        <br />
+        <video loop controls autoplay width="500px">
+          <source src="./K1.mp4" type="video/mp4" />
+          <!-- <source src="movie.ogg" type="video/ogg"> -->
+          Your browser does not support the video tag.
+        </video>
+        <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="../countdown/echo18.jpg" alt="" width="460" height="345" />
+              <div class="carousel-caption">
+                <h3>Runners up in Smart India Hackathon, 2018</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="../countdown/elecsheep.jpg" alt="" width="460" height="345" />
+              <div class="carousel-caption">
+                <h3>Winners of Smart India Hackathon, 2018</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="../countdown/post.jpg" alt="" width="460" height="345" />
+              <div class="carousel-caption">
+                <h3>Winners of Smart India Hackathon, 2017</h3>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="../countdown/echo18.jpg" alt="" width="460" height="345" />
+              <div class="carousel-caption">
+                <h3>Runners up in Smart India Hackathon, 2018</h3>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </center>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript">
+      $(document).ready(function() {
+        $("#myCarousel").carousel({ interval: 1000, pause: false });
+      });
+      const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+      let countDown = new Date("Nov 13, 2019 00:08:00").getTime();
+      var x = setInterval(function() {
+        let now = new Date().getTime();
+        var distance = countDown - now;
+
+        (document.getElementById("days").innerText = Math.floor(distance / day)),
+          (document.getElementById("hours").innerText = Math.floor((distance % day) / hour)),
+          (document.getElementById("minutes").innerText = Math.floor((distance % hour) / minute)),
+          (document.getElementById("seconds").innerText = Math.floor((distance % minute) / second));
+        (document.getElementById("days2").innerText = Math.floor(distance / day)),
+          (document.getElementById("hours2").innerText = Math.floor((distance % day) / hour)),
+          (document.getElementById("minutes2").innerText = Math.floor((distance % hour) / minute)),
+          (document.getElementById("seconds2").innerText = Math.floor(
+            (distance % minute) / second
+          ));
+
+        if (distance < 0) {
+          clearInterval(x);
+        }
+      }, second);
+
+      var y = setInterval(function() {
+        console.log("Hide gal");
+        document.getElementById("gallery").style.display = "block";
+        document.getElementById("words").style.display = "none";
+      }, 1000 * 5);
+
+      var z = setInterval(function() {
+        console.log("show gal");
+        document.getElementById("gallery").style.display = "none";
+        document.getElementById("words").style.display = "block";
+      }, 1000 * 10);
+    </script> -->
+    <script>
+      $(document).ready(function() {
+        $("#myCarousel").carousel({ interval: 1000, pause: false });
+      });
+      var countDownDate = new Date("Nov 13, 2019 8:30:30").getTime();
+      var counter = 0;
+      var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // document.getElementById("timer").innerHTML =
+        //   days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+        document.getElementById("days2").innerText = days;
+        document.getElementById("hours2").innerText = hours;
+        document.getElementById("minutes2").innerText = minutes;
+        document.getElementById("seconds2").innerText = seconds;
+
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("words").innerHTML = "Thank you for participating!";
+          document.getElementById("gallery").innerHTML = "Thank you for participating!";
+        }
+
+        // console.log(x);
+      }, 1000);
+
+      var isGal = 0;
+      var y = setInterval(function() {
+        console.log("show gal");
+        if (isGal >= 9) {
+          document.getElementById("gallery").style.display = "none";
+          document.getElementById("words").style.display = "block";
+          if (isGal >= 11) {
+            isGal = 0;
+          } else {
+            isGal = isGal + 1;
+          }
+        } else {
+          document.getElementById("gallery").style.display = "none";
+          document.getElementById("words").style.display = "block";
+          isGal = isGal + 1;
+        }
+      }, 1000 * 60);
+
+      // var z = setInterval(function() {
+      //   console.log(
+      //     "hide gal",
+      //     document.getElementById("gallery").style.display,
+      //     " ",
+      //     document.getElementById("words").style.display
+      //   );
+      //   document.getElementById("gallery").style.display = "none";
+      //   document.getElementById("words").style.display = "block";
+      // }, 1000 * 5);
+    </script>
+  </body>
+</html>
+
+<!-- Video
+     Carousel -->
